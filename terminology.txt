@@ -1,0 +1,13 @@
+What is a websocket:
+Web socket is a communication protocol.
+It provides full-duplex and persistent connections between a client and a server over a single TCP connection. Advantages:
+
+Unlike HTTP, it allows real-time, low-latency data exchange without repeated polling.
+
+What is polling:
+Contact the server after a given amount of time, again and again, to check if any new data has arrived that has to be sent to the client.
+
+Short Polling (or Regular Polling): The client sends requests at predetermined, fixed intervals, regardless of whether updates are expected or available. The server responds immediately, even with an empty response if no new data exists. This approach is simple to implement but can be inefficient due to frequent, potentially empty, requests.
+
+Long Polling: A more efficient variation where the client sends a request, but the server holds the connection open until new data becomes available or a timeout occurs. Once the server responds with the data, the client immediately sends a new request to maintain the connection, creating a near real-time experience while minimizing the number of overall requests and network overhead
+
