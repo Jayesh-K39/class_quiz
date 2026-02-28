@@ -5,9 +5,10 @@ function DashBoard(){
 	const cardStyle = 'bg-white text-black p-8 rounded-[25px] w-[400px] text-center '
 	return(
 		<div className={`${bodyStyle}`}>
-			<Link to='/' className={`${cardStyle}`}>Start a quiz</Link>
+			<Link to='/controlroom' className={`${cardStyle}`}>Start a quiz</Link>
 			<Link to='/' className={`${cardStyle}`}>Design a quiz</Link>
 		</div>
 	)
 }
 export default DashBoard
+

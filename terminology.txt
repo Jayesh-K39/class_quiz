@@ -1,13 +1,64 @@
+What is a client?:
+a client is the software application or hardware device (like a web browser or mobile app) used by the end-user to request, receive, and display information from a server. It initiates communication using protocols like HTTP/HTTPS to render HTMLCSS, and JavaScript.
+
+----------------------------------------------------------------------
+
+What is a server?:
+A server is a powerful computer or software system that manages, stores, and sends data, files, or applications to other computers, known as clients, over a network. Designed for continuous operation, servers handle requests from multiple users, providing services like web hosting, file storage, or email management. 
+
+----------------------------------------------------------------------
+
 What is a websocket:
 Web socket is a communication protocol.
 It provides full-duplex and persistent connections between a client and a server over a single TCP connection. Advantages:
+----------------------------------------------------------------------
 
 Unlike HTTP, it allows real-time, low-latency data exchange without repeated polling.
 
 What is polling:
 Contact the server after a given amount of time, again and again, to check if any new data has arrived that has to be sent to the client.
 
+----------------------------------------------------------------------
+
 Short Polling (or Regular Polling): The client sends requests at predetermined, fixed intervals, regardless of whether updates are expected or available. The server responds immediately, even with an empty response if no new data exists. This approach is simple to implement but can be inefficient due to frequent, potentially empty, requests.
+
+----------------------------------------------------------------------
 
 Long Polling: A more efficient variation where the client sends a request, but the server holds the connection open until new data becomes available or a timeout occurs. Once the server responds with the data, the client immediately sends a new request to maintain the connection, creating a near real-time experience while minimizing the number of overall requests and network overhead
 
+----------------------------------------------------------------------
+
+What is express() ?:
+It is a function that creates an Express application instance.
+It returns an app object which is used to:
+
+-Handle HTTP requests
+-Define routes
+-Use middleware
+-Start a server
+
+----------------------------------------------------------------------
+
+What is io() ?:
+It initializes Socket.IO
+
+On the server side, it creates the main Socket.IO server instance and 
+attaches it to an HTTP server
+
+On the client side, it connects to a Socket.IO server
+
+It is responsible for managing real-time connections between client and the server.
+
+----------------------------------------------------------------------
+
+What is a socket():
+socket is an object that represents a single connection between the client and the server. 
+It is created automatically when a client connects using io()
+
+Each connected client has its own unique socket instance.
+
+It is used to: 
+-send events (emit)
+-Listen for events (on)
+-Identify the specific client
+-Disconnect the client

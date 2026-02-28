@@ -11,9 +11,10 @@ function Home(){
 
 			<div className={`${holderStyle}`}>
 				<Link to='/teacher' className={`${linkStyle} bg-blue-600 hover:bg-blue-700`}>Teacher</Link>
-				<Link to='/student' className={`${linkStyle} bg-green-600 hover:bg-green-700`}>Student</Link>	
+				<Link to='/student' className={`${linkStyle} bg-green-600 hover:bg-green-700`}>Student</Link>
 			</div>
 		</div>
 	)
 }
+
 export default Home
